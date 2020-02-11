@@ -141,8 +141,9 @@ class Game {
     gameOver(message) {
         document.getElementById('game-over').style.display = 'block';
         document.getElementById('game-over').textContent = message;
-        let btn = document.createElement("BUTTON");
-        btn.innerHTML = "Start new game";
-        document.body.appendChild(btn);
+        document.getElementById('new-game').style.display = 'block';
+        document.getElementById('new-game').addEventListener('click', function() {
+            location.reload();
+        });
     }
 }

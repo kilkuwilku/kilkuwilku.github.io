@@ -45,9 +45,9 @@ body {
 #new-game {
 	display: none;
 	width: 200px;
-	background-color: #B2583C;
+	background-color: #E7D7D2;
 	border-radius: 8px;
-    color: #E7D7D2;
+    color: #B2583C;
 	padding: 25px;
 	position: absolute;
 	left: 0;
@@ -64,6 +64,7 @@ body {
 
 #begin-game:hover, #how-to-play:hover, #new-game:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transition: linear 0.2s;
 }
 
 #logo {

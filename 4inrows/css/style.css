@@ -40,7 +40,7 @@ body {
 	border: none;
     font-family: 'Amaranth', sans-serif;
     font-size: 25px;
-    transition: none;
+    transition: linear 0.2s;
 }
 #new-game {
 	display: none;
@@ -59,12 +59,11 @@ body {
 	border: none;
     font-family: 'Amaranth', sans-serif;
     font-size: 25px;
-    transition: none;
+    transition: linear 0.2s;
 }
 
 #begin-game:hover, #how-to-play:hover, #new-game:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    transition: linear 0.2s;
 }
 
 #logo {

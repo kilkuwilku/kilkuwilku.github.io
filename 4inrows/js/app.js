@@ -34,3 +34,18 @@ document.getElementById('begin-game').addEventListener('click', function() {
     document.addEventListener('keydown', function(e){
         game.handleKeydown(e);
     });
+
+    /* button 'left' clickEvent */
+    document.getElementById('left').addEventListener('click', function(){
+        game.clickEventsLeft();
+    });
+
+    /* button 'right' clickEvent */
+        document.getElementById('right').addEventListener('click', function(){
+            game.clickEventsRight();
+        });
+
+        /* button 'down' clickEvent */
+    document.getElementById('down').addEventListener('click', function(){
+        game.clickEventsDown();
+    });

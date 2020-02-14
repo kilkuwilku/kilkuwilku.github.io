@@ -59,7 +59,6 @@ body {
 	border: none;
     font-family: 'Amaranth', sans-serif;
     font-size: 25px;
-    transition: linear 0.2s;
 }
 
 #begin-game:hover, #how-to-play:hover, #new-game:hover {
@@ -203,3 +202,21 @@ circle {
 	right: 0;
 }
 
+/*arrow buttons for mobile*/
+    #left, #right, #down {
+            background-color: Transparent;
+            background-repeat:no-repeat;
+            border: none;
+            cursor:pointer;
+            overflow: hidden;
+            outline:none;
+            font-size: 400%;
+            color: #E5D4CE;
+            display: none;
+      }
+
+      @media only screen and (max-width: 767px) {
+        #left, #right, #down {
+          display: inline-block;
+        }
+      }

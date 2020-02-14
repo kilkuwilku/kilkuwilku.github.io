@@ -136,14 +136,40 @@ class Game {
         }
     }
 
-    /*display game over message*/
+    /*display game over message and play again button*/
 
     gameOver(message) {
+        /*game over msg*/
         document.getElementById('game-over').style.display = 'block';
         document.getElementById('game-over').textContent = message;
+        
+        /*play again button*/
         document.getElementById('new-game').style.display = 'block';
         document.getElementById('new-game').addEventListener('click', function() {
             location.reload();
         });
+    }
+
+    clickEventsLeft() {
+        if (this.ready) {
+                this.activePlayer.activeTokens.moveLeft();
+            /*} else if (e.key === "ArrowRight") {
+                this.activePlayer.activeTokens.moveRight(this.board.columns);
+            } else if (e.key === "ArrowDown") {
+                this.playToken();
+            }*/
+        }
+    }
+
+    clickEventsRight() {
+        if (this.ready) {
+            this.activePlayer.activeTokens.moveRight(this.board.columns);
+        }
+    }
+
+    clickEventsDown() {
+        if (this.ready) {
+            this.playToken();
+        }
     }
 }

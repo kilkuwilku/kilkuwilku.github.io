@@ -5,12 +5,13 @@
         <link href="https://fonts.googleapis.com/css?family=Amaranth:400,700&display=swap" rel="stylesheet">
         <link rel = "stylesheet" type = "text/css" href = "css/style.css" />
         <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     </head>
 
     <body>
 		<!-- 
-			Start Game Button
+			Start Game/How To Play Button
 			When a player clicks this button, the game will begin
         -->
         <img src="img/logo.png" id="logo">
@@ -95,12 +96,11 @@
             </div>
         </div>
     
-	
-		<!-- 
-			.table: so the board doesn't look like it's floating
-		-->
-        <div class = "table">
-        </div>
+            <button id = "left"><ion-icon name = "arrow-back-circle"></ion-icon></button>
+            <button id = "down"><ion-icon name = "arrow-down-circle"></ion-icon></button>
+            <button id = "right"><ion-icon name = "arrow-forward-circle"></ion-icon></button>
+
+        <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     </body>
 </html>
 

@@ -1,0 +1,71 @@
+body {
+  max-height: 100vh;
+  font-size: 1.5rem;
+  background-color:#222222;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#logo {
+  display: block;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input  {
+  background-color: #222222;
+  color: #868686;
+  border: none;
+  border-bottom: 2px solid #3f3f3f;
+  transition: 0.5s;
+  font-size: 100%;
+}
+
+.input:focus {
+    border-bottom: 2px solid #868686;
+    outline: none;
+}
+
+.button {
+  margin-left: 10px;
+  color: #868686;
+  background-color: #222222;
+  border: none;
+  transition-duration: 0.4s;
+  cursor: default;
+  font-size: 100%;
+}
+
+.button:hover, .button:active {
+  color: #222222;
+  background-color: #868686;
+}
+
+.button:focus {
+  outline: none;
+}
+
+#content {
+  color: #868686;
+  margin-top: 40px;
+  text-align: center;
+}
+
+#results {
+  opacity: 0;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  color: #868686;
+  font-size: 50%;
+}

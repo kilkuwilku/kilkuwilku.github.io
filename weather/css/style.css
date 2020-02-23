@@ -73,5 +73,5 @@ body {
 
 @media only screen and (max-width: 767px) {
   .footer {display: none;}
-  #logo {max-width: 66%; }
+  #logo {max-width: 50%; }
 }

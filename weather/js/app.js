@@ -21,8 +21,8 @@ btn.addEventListener('click', () => {
       //print into index
       document.getElementById('content').innerHTML = `<div id = 'weather'>
       <h1>${city}</h1><img src = "http://openweathermap.org/img/wn/${ico}@2x.png" id = "ico"/>
-      <p>Temperature: ${temp} &#176;C </p>
-      <p>But it feels like: ${tempFeelsLike} &#176;C </p>
+      <p>Temperature: ${Math.round(temp)} &#176;C </p>
+      <p>But it feels like: ${Math.round(tempFeelsLike)} &#176;C </p>
       <p>Wind: ${wind} km/h</p>
       <p>Pressure: ${pressure} hPa </p>
       <p>Sky: ${sky}</p>

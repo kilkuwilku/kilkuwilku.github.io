@@ -1,0 +1,44 @@
+body, html {
+  font-size: 1.5rem;
+  max-height: 100vh;
+  margin: 0;
+  background-image: linear-gradient(to bottom right,#868686,#525252);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Montserrat', sans-serif;
+  color: #cecece;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+img {
+  width: 80%;
+  height: auto;
+  transition: ease-in-out .4s;
+}
+
+img:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,.5), 0 17px 50px 0 rgba(0,0,0,.5);
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  color: #222222;
+  font-size: 50%;
+}

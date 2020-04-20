@@ -9,8 +9,9 @@ body, html {
   color: #cecece;
 }
 
-a:link, a:visited, a:hover, a:active {
+a, a:visited, a:hover, a:active {
   text-decoration: none;
+  color: #9c9c9c;
 }
 
 .logo {
@@ -24,6 +25,7 @@ a:link, a:visited, a:hover, a:active {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  margin-left: 25px;
 }
 
 img {
@@ -41,4 +43,10 @@ img:hover {
   bottom: 0;
   color: #222222;
   font-size: 50%;
+}
+
+.name {
+  font-family: 'Barlow Condensed', sans-serif;
+  display: flex;
+  justify-content: center;
 }

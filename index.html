@@ -5,26 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fullpage.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+    <script src="js/fullpage.js"></script>
     <title>kilkuwilku - official headquarter</title>
   </head>
   
   <body>
-    <!--Logo-->
-    <div class="logo">T  |  W</div>
-    <div class="name">KILKUWILKU</div>
     
-    <a href="index.html"></a>
+    <!--navigation bar-->
+    <nav>
+      <ul class="menu">
+        <li class="logo"><a href="index.html">T | W    kilkuwilku</a></li>
+        <li class="item"><a href="#">HOME</a></li>
+        <li class="item"><a href="#">ABOUT ME</a></li>
+        <li class="item"><a href="#">STACK</a></li>
+        <li class="item"><a href="#">PROJECTS</a></li>
+        <li class="item"><a href="#">CONTACT</a>
+        </li>
+        <li class="toggle"><a href="#"><ion-icon name="menu-sharp"></ion-icon></a></li>
+      </ul>
+    </nav>
 
-    <div class="main">
+    
+    <div id="fullpage">
+      <!--home-->
+      <div class="section">
+        <div class="Home">
+          <video id="bg-vid" autoplay loop muted data-keepplaying>
+            <source src="css/vid/bck-2.webm" type="video/webm"></source>
+          </video>
+          <h1 class='name'>kilkuwilku</h1>
+          <h3 class="welcome">welcome on my site</h3>
+        </div>
+      </div>
 
-        <a href="4inrows/index.html"><img src="img/4inc.png" alt="4inCrowz-logo"></a>
+      <!--about-->
+      <div class="section">
+      <div class="About">
+        <h1 class='header'>ABOUT ME</h1>
+      </div>
+    </div>
+      <!--stack-->
+      <div class="section">
+      <div class="Stack">
+        <h1 class="header">STACK</h1>
+      </div>
+    </div>
+      <!--projects-->
+      <div class="section">
+      <div class="Projects">
+        <h1 class='header'>MY PROJECTS</h1>
+      </div>
 
-        <a href="weather/index.html"><img src="img/weather.png" alt="weather-logo"></a>
+      </div>
+      <!--contact-->
+      <div class="section">
+      <div class="Contact">
+        <h1 class='header'>CONTACT</h1>
+      </div>
+
+      </div>
 
     </div>
-    <!--Footer-->
-    <div class="footer">made with C O F F E I N E by <a href="https://github.com/kilkuwilku">kilkuwilku</a></div>
-    
+
+
+    <script>
+      $(function() {
+    $(".toggle").on("click", function() {
+        if ($(".item").hasClass("active")) {
+            $(".item").removeClass("active");
+            $(this).find("a").html("<ion-icon name='menu-sharp'></ion-icon>");
+        } else {
+            $(".item").addClass("active");
+            $(this).find("a").html("<ion-icon name='close-sharp'></ion-icon>");
+        }
+    });
+  });
+    </script>
+  <script>
+  new fullpage('#fullpage', {
+    navigation: 'true',
+    loopBottom: 'true',
+  });
+</script>
+
+
   </body>
 </html>

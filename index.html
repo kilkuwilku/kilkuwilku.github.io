@@ -20,55 +20,61 @@
     <nav>
       <ul class="menu">
         <li class="logo"><a href="index.html">T | W    kilkuwilku</a></li>
-        <li class="item"><a href="#">HOME</a></li>
-        <li class="item"><a href="#">ABOUT ME</a></li>
-        <li class="item"><a href="#">STACK</a></li>
-        <li class="item"><a href="#">PROJECTS</a></li>
-        <li class="item"><a href="#">CONTACT</a>
+        <li class="item" data-menuanchor="home"><a href="#home">HOME</a></li>
+        <li class="item" data-menuanchor="about"><a href="#about">ABOUT ME</a></li>
+        <li class="item" data-menuanchor="stack"><a href="#stack">STACK</a></li>
+        <li class="item" data-menuanchor="projects"><a href="#projects">PROJECTS</a></li>
+        <li class="item" data-menuanchor="contact"><a href="#contact">CONTACT</a>
         </li>
-        <li class="toggle"><a href="#"><ion-icon name="menu-sharp"></ion-icon></a></li>
       </ul>
     </nav>
 
     
     <div id="fullpage">
-      <!--home-->
-      <div class="section">
-        <div class="Home">
-          <video id="bg-vid" autoplay loop muted data-keepplaying>
+      <div class="section" data-anchor="home">
+        <div class="main">
+          <video autoplay loop muted data-keepplaying>
             <source src="css/vid/bck-2.webm" type="video/webm"></source>
           </video>
-          <h1 class='name'>kilkuwilku</h1>
-          <h3 class="welcome">welcome on my site</h3>
+          <h1>kilkuwilku</h1>
+          <h2>welcome on my site</h2>
         </div>
       </div>
 
       <!--about-->
-      <div class="section">
-      <div class="About">
-        <h1 class='header'>ABOUT ME</h1>
+      <div class="section" data-anchor="about">
+        <div class="content1">
+          <h1>ABOUT ME</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In nulla posuere sollicitudin aliquam ultrices 
+            sagittis orci a. Eget nunc lobortis mattis aliquam faucibus. Vulputate dignissim suspendisse in est ante in nibh mauris. Sem viverra aliquet eget sit amet tellus cras 
+            adipiscing enim. Eget mauris pharetra et ultrices neque ornare aenean euismod elementum. Tincidunt dui ut ornare lectus sit. Adipiscing commodo elit at imperdiet dui 
+            accumsan sit amet. Cursus metus aliquam eleifend mi in. Ut sem viverra aliquet eget sit. Morbi tincidunt augue interdum velit euismod in pellentesque massa placerat. 
+            Cursus vitae congue mauris rhoncus aenean vel elit scelerisque mauris. </p><img src="https://dummyimage.com/600x400/000/fff">
+        </div>
       </div>
-    </div>
+
       <!--stack-->
-      <div class="section">
-      <div class="Stack">
-        <h1 class="header">STACK</h1>
+      <div class="section" data-anchor="stack">
+        <div class="content2">
+          <h1>STACK</h1>
+        </div>
       </div>
-    </div>
+
       <!--projects-->
-      <div class="section">
-      <div class="Projects">
-        <h1 class='header'>MY PROJECTS</h1>
+      <div class="section" data-anchor="projects">
+        <div class="content1">
+          <h1>MY PROJECTS</h1>
+        </div>
       </div>
 
-      </div>
+
       <!--contact-->
-      <div class="section">
-      <div class="Contact">
-        <h1 class='header'>CONTACT</h1>
+      <div class="section" data-anchor="contact">
+        <div class="content2">
+          <h1>CONTACT</h1>
+        </div>
       </div>
 
-      </div>
 
     </div>
 
@@ -90,7 +96,9 @@
   new fullpage('#fullpage', {
     navigation: 'true',
     loopBottom: 'true',
+    verticalCentered: false
   });
+
 </script>
 
 

@@ -1,6 +1,4 @@
 body, html {
-  max-height: 100vh;
-  min-width: 100vh;
   margin: 0;
   background-image: linear-gradient(to bottom right,#868686,#525252);
   background-repeat: no-repeat;
@@ -11,7 +9,7 @@ body, html {
 }
 
 
-a, a:visited, a:hover, a:active {
+a, a:visited, a:active {
   text-decoration: none;
   color: #9c9c9c;
   transition: ease-in-out color .2s;
@@ -21,41 +19,28 @@ a:hover {
   color: #bebebe;
 }
 
-
-/*content items */
-
-
-#bg-vid {
-  min-width: 100vh;
-  z-index: -1000;
-  padding: 0;
-  position: fixed;
-
-}
-.Home, .About, .Stack, .Projects, .Contact {
+.main, .content1, .content2 {
+  height: 100vh;
   display: flex;
-	flex-direction: column;
-	height: 100vh;
-	padding: 0;
-	box-sizing: border-box;
-	color: white;
-  margin-top: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: flex-start;
+  color: #fff;
 }
-
-.About, .Projects {
+.content1 {
   background-image: linear-gradient(to bottom right,#868686,#525252);
   z-index: 9999;
 }
-
-.Stack, .Contact {
+.content2 {
   background-image: linear-gradient(to bottom left,#525252,#868686);
   z-index: 9999;
 }
+/*content items */
 
-.name {
+
+h1 {
   max-width: 16em;
-	margin: 40px 0 0 0;
-	font-size: 12vh;
+  margin: .8em .5em 0 .25em;
   font-weight: bold;
   letter-spacing: 15px;
   animation-name: name-anim;
@@ -63,11 +48,11 @@ a:hover {
   text-shadow: 0 0 2px #000;
 }
 
-.welcome {
+h2 {
   font-family: 'Barlow Condensed', sans-serif;
-  margin: .5em .5em .5em .25em;
+  margin: 0 .5em .5em .35em;
   font-weight: 100;
-  font-size: 2em;
+  /*font-size: 2em;*/
   animation-name: name-anim;
   animation-duration: 2s;
   text-shadow: 0 0 2px #000;
@@ -79,14 +64,14 @@ a:hover {
   100% {opacity: 100%;}
 }
 
-.header {
-  color: #fff;
-  margin: 40px 0 0 10px;
-  text-shadow: 0 0 3px #000;
-	font-size: 12vh;
-  font-weight: bold;
-  letter-spacing: 15px;
+video {
+  min-width: 100vh;
+  padding: 0;
+  z-index: -1000;
+  position: fixed;
+  
 }
+
 
 /*menu*/
 nav {
@@ -112,10 +97,6 @@ ul {
   white-space: nowrap;
 }
 
-.logo a,
-.toggle a {
-  font-size: 20px;
-}
 
 
 /* Mobile menu */
@@ -145,6 +126,7 @@ ul {
   text-decoration: none;
   color: #fff;
 }
+
 /* Tablet menu */
 @media all and (min-width: 600px) {
   .menu {
@@ -166,14 +148,11 @@ ul {
     order: 2;
   }
 }
-/* Desktop menu */
+/* Desktop menu and video background */
 @media all and (min-width: 900px) {
   .item {
     display: block;
     width: auto;
-  }
-  .toggle {
-    display: none;
   }
   .logo {
     order: 0;
@@ -187,4 +166,29 @@ ul {
   .menu li.button {
     padding-right: 0;
   }
+
 }
+
+@media screen and (max-width: 800px) {
+  video {
+    display: none;
+  }
+  body  {
+    background-image: url(img/mobi_bg.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+  nav {
+    display: none;
+  }
+  h1 {letter-spacing: 2px;}
+}
+
+  @media screen and (min-width: 25em){
+    html { font-size: calc( 16px + (24 - 16) * (100vw - 400px) / (800 - 400) ); }
+  }
+
+  @media screen and (min-width: 50em){
+  html { font-size: calc( 16px + (24 - 16) * (100vw - 400px) / (800 - 400) ); }
+  }

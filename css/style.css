@@ -398,6 +398,7 @@ a.active {
     }
     .stack-txt {
         font-size: 1.4em;
+        word-spacing: .3em;
     }
     .stack-ico {
         font-size: 2.3em;

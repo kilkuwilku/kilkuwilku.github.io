@@ -5,12 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fullpage.css">
-    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
-    <script src="js/fullpage.js"></script>
     <title>kilkuwilku - official headquarter</title>
   </head>
   
@@ -38,44 +34,56 @@
           </video>
           <h1 id='name'>kilkuwilku</h1>
           <h2>welcome on my site</h2>
-          <div class="arrowDown"><ion-icon name="chevron-down-outline"></ion-icon></div>
         </div>
       </div>
 
       <!--about-->
       <div class="section" data-anchor="about">
         <div class="content1">
-          <h1>ABOUT ME</h1>
+          <h1>about me</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In nulla posuere sollicitudin aliquam ultrices 
             sagittis orci a. Eget nunc lobortis mattis aliquam faucibus. Vulputate dignissim suspendisse in est ante in nibh mauris. Sem viverra aliquet eget sit amet tellus cras 
             adipiscing enim. Eget mauris pharetra et ultrices neque ornare aenean euismod elementum. Tincidunt dui ut ornare lectus sit. Adipiscing commodo elit at imperdiet dui 
             accumsan sit amet. Cursus metus aliquam eleifend mi in. Ut sem viverra aliquet eget sit. Morbi tincidunt augue interdum velit euismod in pellentesque massa placerat. 
             Cursus vitae congue mauris rhoncus aenean vel elit scelerisque mauris. </p>
-        
         </div>
       </div>
 
       <!--stack-->
       <div class="section" data-anchor="stack">
         <div class="content2">
-          <h1>STACK</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In nulla posuere sollicitudin aliquam ultrices 
-            sagittis orci a. Eget nunc lobortis mattis aliquam faucibus. Vulputate dignissim suspendisse in est ante in nibh mauris. Sem viverra aliquet eget sit amet tellus cras 
-            adipiscing enim. Eget mauris pharetra et ultrices neque ornare aenean euismod elementum. Tincidunt dui ut ornare lectus sit. Adipiscing commodo elit at imperdiet dui 
-            accumsan sit amet. Cursus metus aliquam eleifend mi in. Ut sem viverra aliquet eget sit. Morbi tincidunt augue interdum velit euismod in pellentesque massa placerat. 
-            Cursus vitae congue mauris rhoncus aenean vel elit scelerisque mauris. </p>
+          <h1>stack</h1>
+          <div class="container-stack">
+              <p class="stack-ico"><ion-icon name="logo-html5" class="ico"></ion-icon><ion-icon name="logo-css3" class="ico"></ion-icon><ion-icon name="logo-javascript" class="ico"></ion-icon></p>
+
+              <p class="stack-ico"><ion-icon name="git-branch-outline" class="ico"></ion-icon><ion-icon name="logo-npm" class="ico"></ion-icon><ion-icon name="logo-angular" class="ico"></ion-icon></p>
+
+          </div>
+          <div class="container-stack">
+            <p class="stack-txt">HTML5  CSS3  Javascript </p><p class="stack-txt"> GIT  npm  AngularJS</p>
+          </div>
+        
         </div>
       </div>
 
       <!--projects-->
       <div class="section" data-anchor="projects">
         <div class="content1">
-          <h1>MY PROJECTS</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In nulla posuere sollicitudin aliquam ultrices 
-            sagittis orci a. Eget nunc lobortis mattis aliquam faucibus. Vulputate dignissim suspendisse in est ante in nibh mauris. Sem viverra aliquet eget sit amet tellus cras 
-            adipiscing enim. Eget mauris pharetra et ultrices neque ornare aenean euismod elementum. Tincidunt dui ut ornare lectus sit. Adipiscing commodo elit at imperdiet dui 
-            accumsan sit amet. Cursus metus aliquam eleifend mi in. Ut sem viverra aliquet eget sit. Morbi tincidunt augue interdum velit euismod in pellentesque massa placerat. 
-            Cursus vitae congue mauris rhoncus aenean vel elit scelerisque mauris. </p>
+          <h1>my projects</h1>
+            <div class="container">
+              <div class="proj-item">
+                <a href="/weather/index.html">
+                  <img src="img/weather.png" class="img-proj" alt="Weather app">
+                </a>
+                <p class="proj-descript">Weather forecast. </p><p class="descr">Details on <a href="https://github.com/kilkuwilku/kilkuwilku.github.io/tree/master/weather">GitHub</a>.</p>
+              </div>
+              <div class="proj-item">
+                <a href="/4inrows/index.html">
+                  <img src="img/4inc.png" class="img-proj" alt="4 in rows game">
+                </a>
+                <p class="proj-descript">Javascript game. </p><p class="descr">Details on <a href="https://github.com/kilkuwilku/kilkuwilku.github.io/tree/master/4inrows">GitHub</a>.</p>
+              </div>
+            </div>
         </div>
       </div>
 
@@ -83,39 +91,31 @@
       <!--contact-->
       <div class="section" data-anchor="contact">
         <div class="content2">
-          <h1>CONTACT</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In nulla posuere sollicitudin aliquam ultrices 
-            sagittis orci a. Eget nunc lobortis mattis aliquam faucibus. Vulputate dignissim suspendisse in est ante in nibh mauris. Sem viverra aliquet eget sit amet tellus cras 
-            adipiscing enim. Eget mauris pharetra et ultrices neque ornare aenean euismod elementum. Tincidunt dui ut ornare lectus sit. Adipiscing commodo elit at imperdiet dui 
-            accumsan sit amet. Cursus metus aliquam eleifend mi in. Ut sem viverra aliquet eget sit. Morbi tincidunt augue interdum velit euismod in pellentesque massa placerat. 
-            Cursus vitae congue mauris rhoncus aenean vel elit scelerisque mauris. </p>
+          <h1>contact</h1>
+          <div class="container">
+            <p class="contact-ico">
+              <a href="mailto:tomaszxwilk@gmail.com" target="_blank" rel="noopener noreferrer"><ion-icon name="mail-outline"></ion-icon></a>
+              <a href="https://github.com/kilkuwilku" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+              <a href="https://www.linkedin.com/in/tomasz-wilk-8898a3194/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+            </p>
+          </div>
         </div>
       </div>
-        
+        <div class="arrowDown"><a href="#about" class="a-white"><ion-icon name="chevron-down-outline"></ion-icon></a></div>
     </div>
 
+    <!--scripts section-->
 
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+    <script src="js/fullpage.js"></script>
     <script>
-      $(function() {
-    $(".toggle").on("click", function() {
-        if ($(".item").hasClass("active")) {
-            $(".item").removeClass("active");
-            $(this).find("a").html("<ion-icon name='menu-sharp'></ion-icon>");
-        } else {
-            $(".item").addClass("active");
-            $(this).find("a").html("<ion-icon name='close-sharp'></ion-icon>");
-        }
-    });
-  });
+      new fullpage('#fullpage', {
+        navigation: 'true',
+        loopBottom: 'true',
+        verticalCentered: false
+      });
     </script>
-  <script>
-  new fullpage('#fullpage', {
-    navigation: 'true',
-    loopBottom: 'true',
-    verticalCentered: false
-  });
-
-</script>
 
 
   </body>

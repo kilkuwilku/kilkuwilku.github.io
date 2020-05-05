@@ -195,6 +195,7 @@ video {
 .stack-txt {
     word-spacing: .9em;
     font-size: .8em;
+    margin-bottom: 0;
 }
 
 .stack-ico {

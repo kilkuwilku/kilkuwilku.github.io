@@ -1,0 +1,29 @@
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modify destination #{{ $index + 1}}</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label>Country</label>
+                        <input type="text" ng-model="formModel.countryCode" class="form-control" bs-options="country for country in countries" bs-typeahead ng-required="true" />
+                    </div>
+                    <div class="col-sm-4">
+                        <label>Latitude</label>
+                        <input type="number" class="form-control" ng-model="formModel.latitude" ng-required="true" latitude />
+                    </div>
+                    <div class="col-sm-4">
+                        <label>Longitude</label>
+                        <input type="number" class="form-control" ng-model="formModel.longitude" ng-required="true" longitude />
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

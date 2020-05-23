@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app="AngularApp" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS</title>
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body ng-controller="MainCtrl">
+
+    <div class="container">
+        <form name="form" novalidate>
+            <div class="row">
+                <div class="col">
+                    <h3>
+                        Add new destination
+                    </h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label>Country</label>
+                        <input type="text" ng-model="formModel.countryCode" class="form-control" bs-options="country for country in countries" bs-typeahead ng-required="true" />
+                    </div>
+                    <div class="col-md-4">
+                        <label>Latitude</label>
+                        <input type="number" class="form-control" ng-model="formModel.latitude" ng-required="true" latitude />
+                    </div>
+                    <div class="col-md-4">
+                        <label>Longitude</label>
+                        <input type="number" class="form-control" ng-model="formModel.longitude" ng-required="true" longitude />
+                    </div>
+                    <div class="col-md-4">
+                        <button type="submit" ng-disabled="form.$invalid" ng-click="addDestination()" class="btn btn-add btn-primary">+ Add destination</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div class="row">
+            <h3>
+                Destinations
+            </h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Country Code</th>
+                        <th>Latitude</th>
+                        <th>Longitude</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="destination in destinations">
+                        <th scope="row">{{ $index + 1}}</th>
+                        <td>{{ destination.countryCode }}</td>
+                        <td>{{ destination.latitude }}</td>
+                        <td>{{ destination.longitude }}</td>
+                        <th scope="row">
+                            <button type="button" class="btn btn-sm btn-danger" ng-click="removeDestination(destination)">Remove</button>
+                            <button type="button" class="btn btn-sm btn-primary" ng-click="modify()">Modify</button>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="vendor/angular.js "></script>
+    <script src="vendor/angular-strap.min.js "></script>
+    <script src="vendor/angular-strap.tpl.min.js "></script>
+    <script src="vendor/angular-sanitize.min.js"></script>
+    <script src="vendor/angular-animate.min.js"></script>
+    <script src="app.js "></script>
+</body>
+
+</html>

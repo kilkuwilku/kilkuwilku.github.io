@@ -1,0 +1,18 @@
+body {
+    background: #363F48;
+    color: gray;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.row {
+    padding-top: 50px;
+}
+
+.btn {
+    margin-top: 5px;
+}

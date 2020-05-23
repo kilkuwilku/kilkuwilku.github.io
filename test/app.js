@@ -291,11 +291,12 @@ function MainCtrl($scope, $modal) {
       var myModal = $modal({
         controller: MainCtrl,
         template: 'templates/modal.html',
-       show: false
+        show: false
      });
   
-      $scope.modify = function() {
+      $scope.modify = function(destination) {
         myModal.$promise.then(myModal.show);
+        $scope.destination = destination;
       };
     }
 

@@ -1,3 +1,12 @@
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+    display: none !important;
+}
+
 body {
     background: #363F48;
     color: gray;
@@ -17,6 +26,43 @@ input[type=number]::-webkit-outer-spin-button {
     margin-top: 5px;
 }
 
-.modal-backdrop {
+.modal-backdrop.am-fade {
+    opacity: .7;
+    -webkit-transition: opacity .35s linear;
+    -o-transition: opacity .35s linear;
+    transition: opacity .35s linear;
+}
+
+.modal-backdrop.am-fade.ng-enter {
+    opacity: 0;
+}
+
+.modal-backdrop.am-fade.ng-enter.ng-enter-active {
     opacity: .5;
+}
+
+.modal-backdrop.am-fade.ng-leave {
+    opacity: .5;
+}
+
+.modal-backdrop.am-fade.ng-leave.ng-leave-active {
+    opacity: 0;
+}
+
+.fade {
+    -webkit-transition: all linear 1s;
+    -o-transition: all linear 1s;
+    transition: all linear 1s;
+    opacity: 1;
+}
+
+.fade.ng-hide {
+    opacity: 0;
+}
+
+.ng-hide {
+    opacity: 0;
+    -webkit-transition: opacity .35s linear;
+    -o-transition: opacity .35s linear;
+    transition: opacity .35s linear;
 }

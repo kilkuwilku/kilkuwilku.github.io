@@ -21,15 +21,24 @@
                 <div class="row">
                     <div class="col-md-4">
                         <label>Country</label>
-                        <input type="text" ng-model="formModel.countryCode" minlength="3" class="form-control" bs-options="country for country in countries" bs-typeahead ng-required="true" />
+                        <span style="color:red" ng-show="form.code.$dirty && form.code.$invalid">
+                            <small>Choose country from list!</small>
+                        </span>
+                        <input type="text" name="code" ng-model="formModel.countryCode" minlength="3" class="form-control" data-animation="am-flip-x" bs-options="country for country in countries" bs-typeahead ng-required="true" />
                     </div>
                     <div class="col-md-4">
                         <label>Latitude</label>
-                        <input type="number" class="form-control" ng-model="formModel.latitude" ng-required="true" latitude />
+                        <span style="color:red" ng-show="form.latitude.$dirty && form.latitude.$invalid">
+                            <small>Value should be in range of -90 to 90!</small>
+                        </span>
+                        <input type="number" name="latitude" class="form-control" ng-model="formModel.latitude" ng-required="true" latitude />
                     </div>
                     <div class="col-md-4">
                         <label>Longitude</label>
-                        <input type="number" class="form-control" ng-model="formModel.longitude" ng-required="true" longitude />
+                        <span style="color:red" ng-show="form.longitude.$dirty && form.longitude.$invalid">
+                            <small>Value should be in range of -180 to 180!</small>
+                        </span>
+                        <input type="number" name="longitude" class="form-control" ng-model="formModel.longitude" ng-required="true" longitude />
                     </div>
                     <div class="col-md-4">
                         <button type="submit" ng-disabled="form.$invalid" ng-click="addDestination()" class="btn btn-add btn-primary">+ Add destination</button>
@@ -37,18 +46,18 @@
                 </div>
             </div>
         </form>
-        <div class="row">
+        <div class="row fade" ng-hide="tableEmpty()">
             <h3>
                 Destinations
             </h3>
             <table class="table">
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>Country Code</th>
-                        <th>Latitude</th>
-                        <th>Longitude</th>
-                        <th>Action</th>
+                        <th class="col-md-1">#</th>
+                        <th class="col-md-2">Country Code</th>
+                        <th class="col-md-3">Latitude</th>
+                        <th class="col-md-3">Longitude</th>
+                        <th class="col-md-2">Action </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -57,10 +66,10 @@
                         <td>{{ destination.countryCode }}</td>
                         <td>{{ destination.latitude }}</td>
                         <td>{{ destination.longitude }}</td>
-                        <th>
+                        <td>
                             <button type="button" class="btn btn-sm btn-danger" ng-click="removeDestination(destination)">Remove</button>
                             <button type="button" class="btn btn-sm btn-primary" ng-click="edit(destination,$index)">Modify</button>
-                        </th>
+                        </td>
                     </tr>
                 </tbody>
             </table>

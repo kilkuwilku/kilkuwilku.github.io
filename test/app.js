@@ -1,5 +1,5 @@
-function MainCtrl($scope, $rootScope, $modal) {
-    'use strict';
+function MainCtrl($scope, $modal) {
+
     const countryList = {
         "AF": "Afghanistan",
         "AL": "Albania",
@@ -264,6 +264,15 @@ function MainCtrl($scope, $rootScope, $modal) {
 
     $scope.destinations = [];
 
+    // Table hider
+    $scope.tableEmpty = function() {
+        if ($scope.destinations.length === 0) {
+            return true
+        } else {
+            return false
+        };
+    }
+
     // Add destination to table
     $scope.addDestination = function() {
         const country = $scope.formModel.countryCode;
@@ -277,13 +286,22 @@ function MainCtrl($scope, $rootScope, $modal) {
 
     // Remove destination from table
     $scope.removeDestination = function(destination) {
-        var removedDestination = $scope.destinations.indexOf(destination);
+        const removedDestination = $scope.destinations.indexOf(destination);
         $scope.destinations.splice(removedDestination, 1);
     };
+
+    // Default modal form values
+    $scope.edited = {
+        countryCode: 'code',
+        latitude: null,
+        longitude: null
+    };
+
     //Edit destination
     $scope.edit = function(destination, index) {
+
         // get value from row
-        var Modal = $modal({ scope: $scope, templateUrl: 'templates/modal.html', show: false });
+        const Modal = $modal({ scope: $scope, templateUrl: 'templates/modal.html', show: false });
         $scope.edited.countryCode = destination.countryCode;
         $scope.edited.latitude = destination.latitude;
         $scope.edited.longitude = destination.longitude;
@@ -292,29 +310,18 @@ function MainCtrl($scope, $rootScope, $modal) {
 
         // save new data to row
         $scope.saveEdit = function() {
+            const country = $scope.edited.countryCode;
+            const key = Object.keys(countryList)[Object.values(countryList).indexOf(country)];
             $scope.new = {
-                countryCode: $scope.edited.countryCode,
+                countryCode: key,
                 latitude: $scope.edited.latitude,
                 longitude: $scope.edited.longitude
             };
-            angular.copy($scope.new, $scope.foredit);
             $scope.destination = destination;
             angular.copy($scope.new, $scope.destination);
-
-
             Modal.$promise.then(Modal.hide);
-
-        }
+        };
     };
-    $scope.edited = {
-        countryCode: 'code',
-        latitude: null,
-        longitude: null
-    }
-
-
-
-
 }
 
 
@@ -322,7 +329,6 @@ angular.module('AngularApp', ['mgcrea.ngStrap', 'ngSanitize', 'ngAnimate'])
     .controller('MainCtrl', MainCtrl)
     .directive('latitude', function() {
         return {
-            restrict: 'AE',
             require: 'ngModel',
             link: (scope, element, attrs, controller) => {
                 controller.$validators.forbiddenValue = value => {
@@ -337,7 +343,6 @@ angular.module('AngularApp', ['mgcrea.ngStrap', 'ngSanitize', 'ngAnimate'])
     })
     .directive('longitude', function() {
         return {
-            restrict: 'AE',
             require: 'ngModel',
             link: (scope, element, attrs, controller) => {
                 controller.$validators.forbiddenValue = value => {

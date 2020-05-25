@@ -4,27 +4,28 @@
             <div class="modal-header">
                 <h2 class="modal-title">Modify destination</h2>
             </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <label>Country</label>
-                        <input type="text" class="form-control" ng-model="edited.countryCode" bs-options="country for country in countries" bs-typeahead ng-required="true" />
-                    </div>
-                    <div class="col-sm-4">
-                        <label>Latitude</label>
-                        <input type="number" class="form-control" ng-model="edited.latitude" ng-required="true" latitude />
-                    </div>
-                    <div class="col-sm-4">
-                        <label>Longitude</label>
-                        <input type="number" class="form-control" ng-model="edited.longitude" ng-required="true" longitude />
+            <form name="form" novalidate>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label>Country</label>
+                            <input type="text" class="form-control" ng-model="edited.countryCode" minlength="3" bs-options="country for country in countries" bs-typeahead ng-required="true" />
+                        </div>
+                        <div class="col-sm-4">
+                            <label>Latitude</label>
+                            <input type="number" class="form-control" ng-model="edited.latitude" ng-required="true" latitude />
+                        </div>
+                        <div class="col-sm-4">
+                            <label>Longitude</label>
+                            <input type="number" class="form-control" ng-model="edited.longitude" ng-required="true" longitude />
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" ng-click="saveEdit()">Save changes</button>
-                <button type="button" class="btn btn-secondary" ng-click="$hide()">Cancel</button>
-
-            </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" ng-disabled="form.$invalid" ng-click="saveEdit()">Save changes</button>
+                    <button type="button" class="btn btn-secondary" ng-click="$hide()">Cancel</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>

@@ -21,7 +21,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <label>Country</label>
-                        <input type="text" ng-model="formModel.countryCode" class="form-control" bs-options="country for country in countries" bs-typeahead ng-required="true" />
+                        <input type="text" ng-model="formModel.countryCode" minlength="3" class="form-control" bs-options="country for country in countries" bs-typeahead ng-required="true" />
                     </div>
                     <div class="col-md-4">
                         <label>Latitude</label>
@@ -37,7 +37,6 @@
                 </div>
             </div>
         </form>
-
         <div class="row">
             <h3>
                 Destinations
@@ -54,13 +53,13 @@
                 </thead>
                 <tbody>
                     <tr ng-repeat="destination in destinations">
-                        <th scope="row">{{ $index + 1}}</th>
+                        <th>{{ $index + 1 }}</th>
                         <td>{{ destination.countryCode }}</td>
                         <td>{{ destination.latitude }}</td>
                         <td>{{ destination.longitude }}</td>
-                        <th scope="row">
+                        <th>
                             <button type="button" class="btn btn-sm btn-danger" ng-click="removeDestination(destination)">Remove</button>
-                            <button type="button" class="btn btn-sm btn-primary" ng-click="modify(destination)">Modify</button>
+                            <button type="button" class="btn btn-sm btn-primary" ng-click="edit(destination,$index)">Modify</button>
                         </th>
                     </tr>
                 </tbody>

@@ -18,12 +18,20 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0;
 }
 
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 .row {
     padding-top: 50px;
 }
 
 .btn {
     margin-top: 5px;
+}
+
+.alert {
+    color: red;
 }
 
 .modal-backdrop.am-fade {

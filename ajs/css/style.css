@@ -9,7 +9,8 @@
 
 body {
     background: #363F48;
-    color: gray;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
 }
 
 input[type=number]::-webkit-inner-spin-button,

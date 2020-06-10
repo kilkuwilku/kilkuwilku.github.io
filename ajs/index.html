@@ -28,7 +28,7 @@
                         <span class="alert" ng-show="form.code.$dirty && form.code.$invalid">
                             <small>Choose country from list!</small>
                         </span>
-                        <input type="text" name="code" ng-model="formModel.countryCode" minlength="3" class="form-control" data-animation="am-flip-x" bs-options="country for country in countries" bs-typeahead ng-required="true" />
+                        <input type="text" name="code" ng-model="formModel.country" minlength="3" class="form-control" data-animation="am-flip-x" bs-options="country for country in countries" bs-typeahead ng-required="true" />
                     </div>
                     <div class="col-md-4">
                         <label>Latitude</label>
@@ -58,7 +58,7 @@
                 <thead>
                     <tr>
                         <th class="col-md-1">#</th>
-                        <th class="col-md-2">Country Code</th>
+                        <th class="col-md-2">Country</th>
                         <th class="col-md-3">Latitude</th>
                         <th class="col-md-3">Longitude</th>
                         <th class="col-md-2">Action </th>
@@ -67,7 +67,7 @@
                 <tbody>
                     <tr ng-repeat="destination in destinations">
                         <th>{{ $index + 1 }}</th>
-                        <td>{{ destination.countryCode }}</td>
+                        <td>{{ destination.country }}</td>
                         <td>{{ destination.latitude }}</td>
                         <td>{{ destination.longitude }}</td>
                         <td>

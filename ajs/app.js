@@ -257,7 +257,7 @@ function MainCtrl($scope, $modal) {
 
     // Default form values
     $scope.formModel = {
-        countryCode: 'AF',
+        country: null,
         latitude: null,
         longitude: null
     };
@@ -275,10 +275,8 @@ function MainCtrl($scope, $modal) {
 
     // Add destination to table
     $scope.addDestination = function() {
-        const country = $scope.formModel.countryCode;
-        const key = Object.keys(countryList)[Object.values(countryList).indexOf(country)]; //convert country name into country code
         $scope.destinations.push({
-            countryCode: key,
+            country: $scope.formModel.country,
             latitude: $scope.formModel.latitude,
             longitude: $scope.formModel.longitude
         });
@@ -292,7 +290,7 @@ function MainCtrl($scope, $modal) {
 
     // Default modal form values
     $scope.edited = {
-        countryCode: 'code',
+        country: null,
         latitude: null,
         longitude: null
     };
@@ -302,7 +300,7 @@ function MainCtrl($scope, $modal) {
 
         // get value from row
         const Modal = $modal({ scope: $scope, templateUrl: 'templates/modal.html', show: false });
-        $scope.edited.countryCode = destination.countryCode;
+        $scope.edited.country = destination.country;
         $scope.edited.latitude = destination.latitude;
         $scope.edited.longitude = destination.longitude;
         $scope.edit_index = index;
@@ -310,10 +308,8 @@ function MainCtrl($scope, $modal) {
 
         // save new data to row
         $scope.saveEdit = function() {
-            const country = $scope.edited.countryCode;
-            const key = Object.keys(countryList)[Object.values(countryList).indexOf(country)];
             $scope.new = {
-                countryCode: key,
+                country: $scope.edited.country,
                 latitude: $scope.edited.latitude,
                 longitude: $scope.edited.longitude
             };
@@ -326,6 +322,12 @@ function MainCtrl($scope, $modal) {
 
 
 angular.module('AngularApp', ['mgcrea.ngStrap', 'ngSanitize', 'ngAnimate'])
+    .config(function($typeaheadProvider) {
+        angular.extend($typeaheadProvider.defaults, {
+            minLength: 3,
+            limit: 8
+        });
+    })
     .controller('MainCtrl', MainCtrl)
     .directive('latitude', function() {
         return {

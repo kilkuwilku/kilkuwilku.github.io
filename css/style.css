@@ -15,7 +15,7 @@ a,
 a:visited,
 a:active {
     text-decoration: none;
-    color: #fff;
+    color: rgb(223, 223, 223);
     -webkit-transition: ease-in-out color .2s;
     -o-transition: ease-in-out color .2s;
     transition: ease-in-out color .2s;
